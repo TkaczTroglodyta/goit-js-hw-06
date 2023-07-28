@@ -12,3 +12,32 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const listOfImages = document.querySelector('.gallery');
+
+// longer and harder way, without destructuring assignment
+
+// const elementsOfGallery = images.map(image => {
+//   const img = `<img src="${image.url}" alt="${image.alt}" width="252" heigth="142" style="padding: 0 12px;" />`;
+//   return img;
+// });
+
+// listOfImages.innerHTML = elementsOfGallery.join('');
+
+//shorter way, with destructuring assignment and method chaining
+
+const elementsOfGallery = images
+  .map(({ url, alt }) => `<li><img src="${url}" alt = "${alt}" width="252px" height="142" /></li>`)
+  .join('');
+
+// flexbox
+
+// listOfImages.style.[list-style] = "none"; // prettier do not allow this, dunno why...
+listOfImages.style.listStyle = 'none';
+listOfImages.style.display = 'flex';
+listOfImages.style.flexWrap = 'wrap-reverse';
+listOfImages.style.justifyContent = 'center';
+listOfImages.style.alignContent = 'center';
+listOfImages.style.gap = '12px';
+
+listOfImages.insertAdjacentHTML('afterbegin', elementsOfGallery);
