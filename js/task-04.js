@@ -6,6 +6,7 @@
 //   counter: document.querySelector('#value'),
 //   decrementBtn: document.querySelector('[data-action="decrement"]'),
 //   incrementBtn: document.querySelector('[data-action="increment"]'),
+//   spans: counter.querySelectorAll('span'),
 // };
 
 // function decrementClick() {
@@ -42,6 +43,8 @@ refs.incrementBtn.addEventListener('click', () => {
   counterValue += 1;
   refs.value.textContent = counterValue;
 });
+
+// styles added to <span>
 
 refs.spans.forEach(span => {
   span.style.width = '40px';
