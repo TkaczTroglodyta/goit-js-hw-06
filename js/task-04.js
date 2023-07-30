@@ -22,6 +22,14 @@
 // const decrement = references.decrementBtn.addEventListener('click', decrementClick);
 // const increment = references.incrementBtn.addEventListener('click', incrementClick);
 
+// // styles added to <span>
+
+// references.spans.forEach(span => {
+//   span.style.width = '40px';
+//   span.style.display = 'inline-block';
+//   span.style.textAlign = 'center';
+// });
+
 // method two
 
 let counterValue = 0;
