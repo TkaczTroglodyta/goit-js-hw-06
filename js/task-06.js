@@ -14,15 +14,23 @@ const textInput = document.querySelector('#validation-input');
 
 // with use of ternary operator
 
+// textInput.addEventListener('blur', () => {
+//   textInput.classList.toggle(
+//     'invalid',
+//     textInput.value.length !== parseInt(textInput.getAttribute('data-length'))
+//   );
+//   textInput.classList.toggle(
+//     'valid',
+//     textInput.value.length === parseInt(textInput.getAttribute('data-length'))
+//   );
+// });
+
+// input border is green when 6 signs or more
+
 textInput.addEventListener('blur', () => {
-  textInput.classList.toggle(
-    'invalid',
-    textInput.value.length !== parseInt(textInput.getAttribute('data-length'))
-  );
-  textInput.classList.toggle(
-    'valid',
-    textInput.value.length === parseInt(textInput.getAttribute('data-length'))
-  );
+  textInput.value.length >= parseInt(textInput.getAttribute('data-length'))
+    ? (textInput.classList.add('valid'), textInput.classList.remove('invalid'))
+    : (textInput.classList.add('invalid'), textInput.classList.remove('valid'));
 });
 
 // funny click beside input field
