@@ -18,7 +18,7 @@ const listOfImages = document.querySelector('.gallery');
 // longer and harder way, without destructuring assignment
 
 // const elementsOfGallery = images.map(image => {
-//   const img = `<img src="${image.url}" alt="${image.alt}" width="252" heigth="142" style="padding: 0 12px;" />`;
+//   const img = `<img src="${image.url}" alt="${image.alt}" width="252px" heigth="142px" style="padding: 0 12px;" />`;
 //   return img;
 // });
 
