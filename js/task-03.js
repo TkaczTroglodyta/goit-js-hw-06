@@ -27,7 +27,9 @@ const listOfImages = document.querySelector('.gallery');
 //shorter way, with destructuring assignment and method chaining
 
 const elementsOfGallery = images
-  .map(({ url, alt }) => `<li><img src="${url}" alt = "${alt}" width="252px" height="142" /></li>`)
+  .map(
+    ({ url, alt }) => `<li><img src="${url}" alt = "${alt}" width="252px" height="142px" /></li>`
+  )
   .join('');
 
 // flexbox
