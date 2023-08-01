@@ -12,7 +12,7 @@ const textInput = document.querySelector('#validation-input');
 //   }
 // });
 
-// with use of ternary operator
+// // input border is green when input has 6 signs, no more no less
 
 // textInput.addEventListener('blur', () => {
 //   textInput.classList.toggle(
@@ -25,7 +25,7 @@ const textInput = document.querySelector('#validation-input');
 //   );
 // });
 
-// input border is green when 6 signs or more
+// input border is green when input has 6 signs or more
 
 textInput.addEventListener('blur', () => {
   textInput.value.length >= parseInt(textInput.getAttribute('data-length'))
