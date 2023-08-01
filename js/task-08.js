@@ -1,3 +1,21 @@
+// const loginForm = document.querySelector('.login-form');
+
+// loginForm.addEventListener('submit', handleLogin);
+
+// function handleLogin(event) {
+//   event.preventDefault();
+//   const {
+//     elements: { email, password },
+//   } = event.currentTarget;
+//   if (email.value === '' || password.value === '') {
+//     return console.log('Please fill in all the fields!');
+//   }
+//   console.log(`Email: ${email.value}, Password: ${password.value}`);
+//   event.currentTarget.reset();
+// }
+
+// with window alert() method
+
 const loginForm = document.querySelector('.login-form');
 
 loginForm.addEventListener('submit', handleLogin);
@@ -8,8 +26,9 @@ function handleLogin(event) {
     elements: { email, password },
   } = event.currentTarget;
   if (email.value === '' || password.value === '') {
-    return console.log('Please fill in all the fields!');
+    return alert('Please fill in all the fields!');
   }
+  alert('All fields filled in!');
   console.log(`Email: ${email.value}, Password: ${password.value}`);
   event.currentTarget.reset();
 }
